@@ -5,6 +5,33 @@ $navigation-breakpoint: 1000px;
 
 .sc-navigation-v2 {
   @include sc-navigation-v2-mixin($navigation-breakpoint);
+
+  button.smyle-header-menu {
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $navigation-breakpoint) {
+      padding: 0 20px 0 0;
+    }
+
+    .title {
+      &::after {
+        margin-top: 0;
+      }
+    }
+  }
+
+  button.smyle-header-menu:after {
+    margin-top: 0;
+  }
+
+  .smyle-header-icon {
+    width: 55px;
+    height: 33px;
+    margin-right: 8px;
+  }
 }
 
 .skip-main {
